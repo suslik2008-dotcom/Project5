@@ -6,10 +6,16 @@
 
 int main()
 {
-    double x, y, z;  // ������ �������
-    scanf("%lf %lf %lf", &x, &y, &z);
+    setlocale(LC_ALL, "RUS");
+    double x, y, z;  // Ввод значений
+    printf("Введите x >> ");
+    scanf("%lf", &x);
+    printf("Введите y >> ");
+    scanf("%lf", &y);
+    printf("Введите z >> ");
+    scanf("%lf", &z);
     double a = fabs(cos(x) - cos(y));
-    double b = pow(a, 1 + pow(sin(y), 2)*2);
+    double b = pow(a, 1 + pow(sin(y), 2) * 2);
     double c = 1 + z + pow(z, 2) / 2 + pow(z, 3) / 3 + pow(z, 4) / 4;
-    printf("%le", b*c);
+    printf("w(x, y, z) = %0.4f", (float)(b * c));
 }
